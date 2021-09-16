@@ -8,7 +8,7 @@ a{text-decoration: none;}
   
 .parent_top_navbar{
     display: flex; justify-content: space-between;
-    height: 65px; width: 100%; font-weight: 400; position: fixed; border-bottom: 1px solid grey;
+    height: 65px; width: 100%; font-weight: 400; position: fixed; 
 }
 
 strong{color: #e20074;font-weight: 600;}
