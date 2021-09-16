@@ -59,14 +59,14 @@ hr { border-top: 0.1px; color: rgb(175, 175, 175); }
 .wrapper-content-main{ padding: 40px; overflow: hidden; }
 
 .parent-wrapper-group-box{ height:100px; width: 100%;
-  display: flex; overflow: auto;}
+  display: flex; overflow: hidden;}
 
 .child-wrapper-group-box{border:1px solid rgb(199, 199, 199); height: 80px; border-radius: 5px; background-color: white;
   display: flex; align-items: center; margin-right: 15px; width: 300px;
 }
 .navbarR_1-wrapper{ width: 100%;}
 .navbarR_1-wrapper span{display:block; width: 200px; height: 20px; color: rgb(48, 48, 48); overflow: hidden; font-size: 1.2rem;}
-
+.child-wrapper-group-box img{ margin-left:10px; margin-right:10px; height : 20px; width: 20px;}
 .wrapper-content{
    display: flex; justify-content: space-between;
   height: 65px; width: 100%;margin-top: 20px;
