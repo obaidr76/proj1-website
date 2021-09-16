@@ -78,7 +78,7 @@ hr { border-top: 0.1px; color: rgb(175, 175, 175); }
   border: none; color:white;
 }
 .group_data button{
-  background-color: white; border: 1px solid black; color: grey;
+  background-color: white; border: 1px solid #e20074; color: #e20074;
 }
 .wrapper-table{
   width: 100%; background-color: white; height:auto; display: flex; justify-content: space-between; align-items: center;
