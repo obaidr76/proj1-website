@@ -115,7 +115,9 @@ hr { border-top: 0.1px; color: rgb(175, 175, 175); }
   .wrapper{width: 100%;  margin-left:0%;  }
   .top_child_navbar_eleR input{padding: 8px; width: 100px;  }
   body {    font-size:0.8rem; height: 100%;  }
-
+  
+  .group_data td, .group_data th {padding: 10px; text-align: center;
+  }
 }
 
 @media only screen and (max-width:900px) {
