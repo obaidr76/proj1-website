@@ -105,16 +105,24 @@ hr { border-top: 0.1px; color: rgb(175, 175, 175); }
 .top_child_navbar_eleR input{padding: 8px; width: 200px;
 }
 
+@media only screen and (max-width:400px) {
+  body {    font-size:0.6rem; height: 100%;  }
+
+}
+
 @media only screen and (max-width:640px) {
   .parent_side_navbar{display: none;}
   .wrapper{width: 100%;  margin-left:0%;  }
   .top_child_navbar_eleR input{padding: 8px; width: 100px;  }
+  body {    font-size:0.8rem; height: 100%;  }
+
 }
 
 @media only screen and (max-width:900px) {
   .mediagroup2 {
     display: none;
   }
+  body {    font-size:1.0rem; height: 100%;  }
 }
 
 @media only screen and (max-width: 1120px){
