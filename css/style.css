@@ -110,7 +110,7 @@ hr { border-top: 0.1px; color: rgb(175, 175, 175); }
    display: flex; justify-content: space-between;
   height: 65px; width: 100%;margin-top: 20px;
 }
-.wrapper-content-table{ height: calc(100vh - 300px);
+.wrapper-content-table{ height: calc(100vh - 400px);
    background-color: white; width: 100%; border-radius: 5px; display: block; overflow: auto; }
 
 .top_child_navbar_eleR button, .group_data button {
@@ -210,6 +210,7 @@ a{text-decoration: none;}
     display: none;
   }
   .top_child_navbar_eleR input{ width: 150px;  }
+  .wrapper-content-table{ height: calc(100vh - 350px);}
 }
 
 @media only screen and (max-width:768px) {
@@ -259,6 +260,7 @@ a{text-decoration: none;}
   .btnx{margin-right: 10px;}
   .top_child_navbar_eleL_group{margin-left: 10px;}
   .child-wrapper-group-box{ height: 60px; }
+  .pageno span{ font-size: 0.65rem;}
 }
 
 @media only screen and (max-width:400px) {
@@ -290,3 +292,12 @@ button, a, .child_side_navbar_top, .child_side_navbar_bottom, .top_child_navbar_
 .mediagroup0 img, .mediagroup1 img{margin-right: 8px;}
 .mediagroup0 {color:#e20074;}
 .mediagroup0, .mediagroup1{  text-decoration: underline;}
+
+
+
+::-webkit-scrollbar {
+  width: 2px; background: #dee3e6; 
+}
+::-webkit-scrollbar-thumb {
+  background: #e20074;
+}
