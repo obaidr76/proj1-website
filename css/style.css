@@ -247,16 +247,13 @@ a{text-decoration: none;}
 
   .top_child_navbar_eleR input{ width: 100px;  }
   .overflow_text{    width: 150px;}
-  .navbarR_1-wrapper span{ display:block; width: 150px;}
-  .navbarR_1-wrapper span{ font-size: 0.8rem;}
+  .navbarR_1-wrapper span{ display:block; width: 150px; font-size: 0.8rem;}
 
 }
 
 @media only screen and (max-width:500px) {
 .top_child_navbar_eleR{margin-right: 10px;}
 .top_child_navbar_eleL{margin-left: 10px;}
-  .top_child_navbar_eleR input{ width: 100px;  }
-  .overflow_text{    width: 150px;}
   .wrapper-content-main{ padding: 40px 10px; }
   .group_data {margin: 0px 10px;}
   .btnx{margin-right: 10px;}
@@ -268,16 +265,14 @@ a{text-decoration: none;}
 
   .top_child_navbar_eleR input{ width: 80px;  }
   .overflow_text{    width: 90px;}
-  body {    font-size:0.6rem; 
-  }
+  body {    font-size:0.6rem;   }
 }
 
 @media only screen and (max-width:335px) {
-
+  .username_logo{font-size: 0.8rem}
   .top_child_navbar_eleR input{ width: 60px; padding: 6px; }
   .overflow_text{    width: 80px;}  
-  .top_child_navbar_eleR button {padding: 6px 6px;
-  }
+  .top_child_navbar_eleR button {padding: 6px 6px; font-size: 0.8rem;  }
   .group_data {font-size: 0.75rem;}
   .group_data button{padding: 3px 10px;}
 }
