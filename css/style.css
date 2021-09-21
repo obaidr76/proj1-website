@@ -94,7 +94,11 @@ hr { border-top: 0.1px; color: rgb(175, 175, 175); }
 .wrapper-content-main{ padding: 40px; overflow: hidden; }
 
 .parent-wrapper-group-box{ height:100px; width: 100%; margin-top:20px;
-  display: flex; overflow: hidden;}
+  display: flex; overflow: auto;}
+
+.parent-wrapper-group-box::-webkit-scrollbar {
+    display: none;
+}
 
 .child-wrapper-group-box{ height: 80px; border-radius: 5px; background-color: white;
   display: flex; align-items: center; margin-right: 15px; width: 300px;
