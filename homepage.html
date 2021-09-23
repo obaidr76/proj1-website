@@ -71,13 +71,37 @@
         <div class="wrapper">
             <div class="wrapper-content-main">
                 <strong>ALL GROUPS:</strong><hr style="margin: 20px 0;">                
-                <strong style="color: grey; font-weight:500;">Recommended Groups:</strong><span style="float: right;"><img src="images/Arrow_back.svg" alt="img!"> <img src="images/Arrow_forward.svg" alt="img!"></span>
-                <div class="parent-wrapper-group-box">
+                <strong style="color: grey; font-weight:500;">Recommended Groups:</strong><span style="float: right;"><img onClick="scrollbtn(this.id)" id = "scroll_left" src="images/Arrow_back.svg" alt="img!"> <img onClick="scrollbtn(this.id)" id = "scroll_right"src="images/Arrow_forward.svg" alt="img!"></span>
+                <div id = "groupscroller" class="parent-wrapper-group-box">
                     <div class="child-wrapper-group-box">
                         <a href="#"><img src="images/Group_icon.svg" alt="img!"></a>
                         <div class="navbarR_1-wrapper">
                             <a href="#"><span class="overflow_text">ABC Security Group</span></a>
                             <a href="#"><span class="overflow_text  recommended_group_textname" >John Smith</span></a>
+                        </div>
+                        <a href="#"><img src="images/plus.svg" alt="img!"></a>
+                    </div>
+                    <div class="child-wrapper-group-box">
+                        <a href="#"><img src="images/Group_icon.svg" alt="img!"></a>
+                        <div class="navbarR_1-wrapper">
+                            <a href="#"><span  class="overflow_text">1HR Care Talent scout scout scoutscoutscout</span></a>
+                            <a href="#"><span  class="overflow_text recommended_group_textname" >John Smith, Lisandro</span></a>
+                        </div>
+                        <a href="#"><img src="images/plus.svg" alt="img!"></a>
+                    </div>
+                    <div class="child-wrapper-group-box">
+                        <a href="#"><img src="images/Group_icon.svg" alt="img!"></a>
+                        <div class="navbarR_1-wrapper">
+                            <a href="#"><span  class="overflow_text">1HR Care Talent scout scout scoutscoutscout</span></a>
+                            <a href="#"><span  class="overflow_text recommended_group_textname" >John Smith, Lisandro</span></a>
+                        </div>
+                        <a href="#"><img src="images/plus.svg" alt="img!"></a>
+                    </div>
+                    <div class="child-wrapper-group-box">
+                        <a href="#"><img src="images/Group_icon.svg" alt="img!"></a>
+                        <div class="navbarR_1-wrapper">
+                            <a href="#"><span  class="overflow_text">1HR Care Talent scout scout scoutscoutscout</span></a>
+                            <a href="#"><span  class="overflow_text recommended_group_textname" >John Smith, Lisandro</span></a>
                         </div>
                         <a href="#"><img src="images/plus.svg" alt="img!"></a>
                     </div>
@@ -121,115 +145,52 @@
                         </div>                    
                         <div class="top_child_navbar_eleR btnx">
                             <i class='bx bx-search'></i>
-                            <input type="text" placeholder=" Find A Group" style="font-family:Arial, FontAwesome" />
-                            <button type="submit"> + New Group</button>
+                            <input id="inputtext" onkeyup="filtertable()" type="text" placeholder=" Find A Group" style="font-family:Arial, FontAwesome" />
+                            <button> + New Group</button>
                         </div> 
                     </div>
                     <div class="wrapper-table">
-                        <table class="group_data">
+                        <table id ="group_table" class="group_data">
                             <thead>
                                 <tr>
                                 <th style="width: 10px;"><input class="checkbox_default" type="checkbox"></th>
-                                <th class="mediagroup0" style="color:black; width: auto; text-decoration: none;">GROUP NAME</th>
-                                <th class="mediagroup1" style="width: auto; text-decoration: none;">GROUP OWNER</th>
-                                <th class="mediagroup2" style="width: auto;">CREATED ON</th>
+                                <th class="mediagroup0" style="color:black; text-decoration: none;">GROUP NAME
+                                    <img onclick="sorttable()" src="images/Sorting.svg" alt="img!" style="float: right; top:0px; width: 20px; height: 10px;"></th>
+                                <th class="mediagroup1" style=" text-decoration: none;">GROUP OWNER</th>
+                                <th class="mediagroup2">CREATED ON</th>
                                 <th style="text-align: center;">ACTIONS</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                <td><input class="checkbox_default" type="checkbox"></td>
-                                <td class="mediagroup0" ><img src="images/Group_icon.svg" alt="img!"><span class="overflow_text">Maria Anders Anders Anders Anders Anders Anders Anders...</span></td>
+                                <tr id="group_tr">
+                                <td style="width: 10px;"><input class="checkbox_default" type="checkbox"></td>
+                                <td class="mediagroup0 groupsrch"><img src="images/Group_icon.svg" alt="img!"><span class="overflow_text">maria a</span></td>
                                 <td class="mediagroup1" ><img src="images/User_Multiple.svg" alt="img!"><span class="overflow_text">Maria Anders Anders Anders Anders Anders Anders Anders...</span></td>
                                 <td class="mediagroup2" >08/13/2021</td>
                                 <td style="text-align: center;">
                                     <button type="submit"> + Join</button></td>
                                 </tr>
-                                <tr>
-                                <td><input class="checkbox_default" type="checkbox"></td>
-                                <td class="mediagroup0" ><img src="images/Group_icon.svg" alt="img!"><span class="overflow_text">Maria Anders Anders Anders Anders Anders Anders Anders...</span></td>
+                                <tr id="group_tr">
+                                <td style="width: 10px;"><input class="checkbox_default" type="checkbox"></td>
+                                <td class="mediagroup0 groupsrch" ><img src="images/Group_icon.svg" alt="img!"><span class="overflow_text">anders b</span></td>
                                 <td class="mediagroup1" ><img src="images/User_Multiple.svg" alt="img!"><span class="overflow_text">Maria Anders Anders Anders Anders Anders Anders Anders...</span></td>
                                 <td class="mediagroup2" >08/13/2021</td>
                                 <td style="text-align: center;">
                                     <button type="submit"> + Join</button></td>
                                 </tr>
-                                <tr>
-                                <td><input class="checkbox_default" type="checkbox"></td>
-                                <td class="mediagroup0" ><img src="images/Group_icon.svg" alt="img!"><span class="overflow_text">Maria Anders Anders Anders Anders Anders Anders Anders...</span></td>
-                                <td class="mediagroup1" ><img src="images/User_Multiple.svg" alt="img!"><span class="overflow_text">Maria Anders Anders Anders Anders Anders Anders Anders...</span></td>
+                                <tr id="group_tr">
+                                <td style="width: 10px;"><input class="checkbox_default" type="checkbox"></td>
+                                <td class="mediagroup0 groupsrch" ><img src="images/Group_icon.svg" alt="img!"><span class="overflow_text">tanisq c</span></td>
+                                <td class="mediagroup1 groupsrch" ><img src="images/User_Multiple.svg" alt="img!"><span class="overflow_text">Maria Anders Anders Anders Anders Anders Anders Anders...</span></td>
                                 <td class="mediagroup2" >08/13/2021</td>
                                 <td style="text-align: center;">
                                     <button type="submit"> + Join</button></td>
                                 </tr>
-                                <tr>
-                                <td><input class="checkbox_default" type="checkbox"></td>
-                                <td class="mediagroup0" ><img src="images/Group_icon.svg" alt="img!"><span class="overflow_text">Maria Anders Anders Anders Anders Anders Anders Anders...</span></td>
+                                <tr id="group_tr">
+                                <td style="width: 10px;"><input class="checkbox_default" type="checkbox"></td>
+                                <td class="mediagroup0 groupsrch" ><img src="images/Group_icon.svg" alt="img!"><span class="overflow_text">obaid d</span></td>
                                 <td class="mediagroup1" ><img src="images/User_Multiple.svg" alt="img!"><span class="overflow_text">Maria Anders Anders Anders Anders Anders Anders Anders...</span></td>
                                 <td class="mediagroup2" >08/13/2021</td>
-                                <td style="text-align: center;">
-                                    <button type="submit"> + Join</button></td>
-                                </tr>
-                                <tr>
-                                <td><input class="checkbox_default" type="checkbox"></td>
-                                <td class="mediagroup0" ><img src="images/Group_icon.svg" alt="img!"><span class="overflow_text">Maria Anders Anders Anders Anders Anders Anders Anders...</span></td>
-                                <td class="mediagroup1" ><img src="images/User_Multiple.svg" alt="img!"><span class="overflow_text">Maria Anders Anders Anders Anders Anders Anders Anders...</span></td>
-                                <td class="mediagroup2" >08/13/2021</td>
-                                <td style="text-align: center;">
-                                    <button type="submit"> + Join</button></td>
-                                </tr>
-                                <tr>
-                                <td><input class="checkbox_default" type="checkbox"></td>
-                                <td class="mediagroup0" ><img src="images/Group_icon.svg" alt="img!"><span class="overflow_text">Maria Anders Anders Anders Anders Anders Anders Anders...</span></td>
-                                <td class="mediagroup1" ><img src="images/User_Multiple.svg" alt="img!"><span class="overflow_text">Maria Anders Anders Anders Anders Anders Anders Anders...</span></td>
-                                <td class="mediagroup2" >08/13/2021</td>
-                                <td style="text-align: center;">
-                                    <button type="submit"> + Join</button></td>
-                                </tr>
-                                <tr>
-                                <td><input class="checkbox_default" type="checkbox"></td>
-                                <td class="mediagroup0" ><img src="images/Group_icon.svg" alt="img!"><span class="overflow_text">Maria Anders Anders Anders Anders Anders Anders Anders...</span></td>
-                                <td class="mediagroup1" ><img src="images/User_Multiple.svg" alt="img!"><span class="overflow_text">Maria Anders Anders Anders Anders Anders Anders Anders...</span></td>
-                                <td class="mediagroup2" >08/13/2021</td>
-                                <td style="text-align: center;">
-                                    <button type="submit"> + Join</button></td>
-                                </tr>
-                                <tr>
-                                <td><input class="checkbox_default" type="checkbox"></td>
-                                <td class="mediagroup0" ><img src="images/Group_icon.svg" alt="img!"><span class="overflow_text">Maria Anders Anders Anders Anders Anders Anders Anders...</span></td>
-                                <td class="mediagroup1" ><img src="images/User_Multiple.svg" alt="img!"><span class="overflow_text">Maria Anders Anders Anders Anders Anders Anders Anders...</span></td>
-                                <td class="mediagroup2" >08/13/2021</td>
-                                <td style="text-align: center;">
-                                    <button type="submit"> + Join</button></td>
-                                </tr>
-                                <tr>
-                                <td><input class="checkbox_default" type="checkbox"></td>
-                                <td class="mediagroup0" ><img src="images/Group_icon.svg" alt="img!"><span class="overflow_text">Maria Anders Anders Anders Anders Anders Anders Anders...</span></td>
-                                <td class="mediagroup1" ><img src="images/User_Multiple.svg" alt="img!"><span class="overflow_text">Maria Anders Anders Anders Anders Anders Anders Anders...</span></td>
-                                <td class="mediagroup2" >08/13/2021</td>
-                                <td style="text-align: center;">
-                                    <button type="submit"> + Join</button></td>
-                                </tr>
-                                <tr>
-                                <td><input class="checkbox_default" type="checkbox"></td>
-                                <td class="mediagroup0" ><img src="images/Group_icon.svg" alt="img!"><span class="overflow_text">Maria Anders Anders Anders Anders Anders Anders Anders...</span></td>
-                                <td class="mediagroup1" ><img src="images/User_Multiple.svg" alt="img!"><span class="overflow_text">Maria Anders Anders Anders Anders Anders Anders Anders...</span></td>
-                                <td class="mediagroup2" >08/13/2021</td>
-                                <td style="text-align: center;">
-                                    <button type="submit"> + Join</button></td>
-                                </tr>
-                                <tr>
-                                <td><input class="checkbox_default" type="checkbox"></td>
-                                <td class="mediagroup0" ><img src="images/Group_icon.svg" alt="img!"><span class="overflow_text">Maria Anders Anders Anders Anders Anders Anders Anders...</span></td>
-                                <td class="mediagroup1" ><img src="images/User_Multiple.svg" alt="img!"><span class="overflow_text">Maria Anders Anders Anders Anders Anders Anders Anders...</span></td>
-                                <td class="mediagroup2" >08/13/2021</td>
-                                <td style="text-align: center;">
-                                    <button type="submit"> + Join</button></td>
-                                </tr>
-                                <tr>
-                                <td><input class="checkbox_default" type="checkbox"></td>
-                                <td class="mediagroup0" ><img src="images/Group_icon.svg" alt="img!"><span class="overflow_text">Maria Anders Anders Anders Anders Anders Anders Anders...</span></td>
-                                <td class="mediagroup1" ><img src="images/User_Multiple.svg" alt="img!"><span class="overflow_text">Maria Anders Anders Anders Anders Anders Anders Anders...</span></td>
-                                <td class="mediagroup2" >08/13/202991</td>
                                 <td style="text-align: center;">
                                     <button type="submit"> + Join</button></td>
                                 </tr>
@@ -244,4 +205,5 @@
             </div>      
         </div>
     </body>
+    <script src="js/script.js"></script>
 </html>
