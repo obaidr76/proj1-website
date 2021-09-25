@@ -37,57 +37,81 @@ function filtertable(){
 }
 
 
-
-function sorttable() {
-    var tablevalue, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-
-    tablevalue = document.getElementById("group_table");
-
-    switching = true;
-    dir = "asc";
-    while (switching) {
-
-    switching = false;
-    rows = tablevalue.getElementsByTagName("tr");
+function debounce(func, timeout = 1000){
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => { func.apply(this, args); }, timeout);
+  };
+}
+const processChange = debounce(() => filtertable());
 
 
-    for (i = 1; i < (rows.length - 1); i++) {
-        // Start by saying there should be no switching:
-        shouldSwitch = false;
-        /* Get the two elements you want to compare,
-        one from current row and one from the next: */
-        x = rows[i].getElementsByTagName("td")[1];
-        y = rows[i+1].getElementsByTagName("td")[1];
-        /* Check if the two rows should switch place,
-        based on the direction, asc or desc: */
-        if (dir == "asc") {
-          if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-            // If so, mark as a switch and break the loop:
-            shouldSwitch = true;
-            break;
-          }
-        } else if (dir == "desc") {
-          if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-            // If so, mark as a switch and break the loop:
-            shouldSwitch = true;
-            break;
-          }
-        }
-      }
-      if (shouldSwitch) {
-        /* If a switch has been marked, make the switch
-        and mark that a switch has been done: */
-        rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-        switching = true;
-        // Each time a switch is done, increase this count by 1:
-        switchcount ++;
-      } else {
-        /* If no switching has been done AND the direction is "asc",
-        set the direction to "desc" and run the while loop again. */
-        if (switchcount == 0 && dir == "asc") {
-          dir = "desc";
-          switching = true;
-        }
-      }
-    }
+
+
+
+
+function sortTableByGroupName(table, column, asc = true) {
+  // checking if asc or not
+  const dirModifier = asc ? 1 : -1;
+  // single tbody in case we have many tbody in a table
+  const tBody = table.tBodies[0];
+  // converts the data into arry form list
+  const rows = Array.from(tBody.querySelectorAll("tr"));
+  // sort each row
+  console.log(rows);
+
+
+  const sortedRows = rows.sort((a, b) => {
+    const aColText = a.querySelectorAll("td")[1].textContent.trim();
+    const bColText = b.querySelectorAll("td")[1].textContent.trim();
+    // if td1 > td2 then multiply by 1 to dirModifier to remain as it is and if not then multiply by -1 for desending
+    return aColText > bColText ? 1 * dirModifier : -1 * dirModifier;
+  });
+
+  //   remove all the existing trs from the table
+  while (tBody.firstChild) {
+    tBody.removeChild(tBody.firstChild);
   }
+
+  //   Now adding trs back in the table after sorting
+  tBody.append(...sortedRows);
+
+  table
+  .querySelectorAll("th")
+  .forEach((th) => th.classList.remove("th-sort-asc", "th-sort-desc"));
+//   toggle between the sort classes
+table.querySelector("th").classList.toggle("th-sort-asc", asc);
+table.querySelector("th").classList.toggle("th-sort-desc", !asc);
+}
+
+
+
+
+let whichSort = document.getElementById("sorting");
+// calling the function on click to trigger the sorting
+whichSort.addEventListener("click", function () {
+  // gets the element to check which class is implemented on it
+  
+  let tableElement = document.getElementById("group_table");
+
+  let checkOrder = tableElement.getElementsByTagName("th")[0];
+  let currentIsAscending = checkOrder.classList.contains("th-sort-asc");
+  console.log(currentIsAscending);
+  sortTableByGroupName(tableElement, 1, !currentIsAscending);
+
+});
+
+
+function toggleNavbar(){
+    let checkClass = document.getElementById("side-navbar");
+    console.log(checkClass);
+    if (checkClass.className === "parent_side_navbar")
+    {
+        checkClass.className += "closeNavbar";
+    }
+    else
+    {
+        checkClass.className = "parent_side_navbar"; 
+    } 
+}

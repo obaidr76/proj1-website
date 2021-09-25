@@ -3,207 +3,237 @@
     <head>
     <title>Cloud Access</title>
         <link rel="shortcut icon" href="images/cloud.png" type="image/x-icon">
+        <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet"/>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
-        <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet"/>
-
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 
     <body>
-        <header class="parent_top_navbar">
-            <div class="top_child_navbar_eleL">
-                <img src="images/cloud.png" alt="img!">                
-                <p class="cloud_logo" ><strong>CLOUD</strong> ACCESS</p>
-            </div>
-            <div class="top_child_navbar_eleR">
-                <a href="#"><img style="width: 32px; height: 35px;" src="images/bell.png" alt="img!"></a>
-                <div class="navbarR_1">
-                    <a href="#"><p class="username_logo">John Smith</p></a>
-                    <a href="#"><p class="username_sim">T-Mobile USA</p></a>
+        <div class="container">
+            <header>
+                <div class="top_child_navbar_eleL">
+                    <i onclick="toggleNavbar()" class="fa fa-bars" id="toggleNavbar" aria-hidden="true"></i>
+                    <img src="images/cloud.png" alt="img!">                
+                    <p class="cloud_logo" ><strong>CLOUD</strong> ACCESS</p>
                 </div>
-                <a href="#"><img src="images/person.jpg" alt="img!"></a>
-            </div>
-        </header>
-        <div class="parent_side_navbar">                
-            <div class="child_side_navbar_top">
-                <strong>YOUR GROUPS/ PACKS</strong>
-                <p style="margin:20px 0 40px 0; color: rgb(184, 184, 184);">You don't have access to anything yet</p>
-                <hr>
-                
-                <strong style="margin:40px 0 30px 0; display: block;">YOUR REQUESTS</strong>
-                 
-                <table class="group_requests">
-                    <tr>
-                      <th><span class="requestcount_head">Pending</span></th>
-                      <td><span class="requestcount">6</span></td>
-                    </tr>
-                    <tr>
-                      <th><span class="requestcount_head">Approved</span></th>
-                      <td><span class="requestcount">6</span></td>
-                    </tr>
-                    <tr>
-                      <th><span class="requestcount_head">Rejected</span></th>
-                      <td><span class="requestcount">6</span></td>
-                    </tr>
-                </table>                  
-                <hr>
-                <strong style="margin:30px 0 30px 0; display: block;">YOUR APPROVALS</strong>
-                 
-                <p style="margin:30px 0 30px 0; display: block; color: rgb(184, 184, 184);">You don't have any approvals yet</p>
-                <hr>
-            </div>
-            <div class="child_side_navbar_bottom">
-                <div class="side_child_navbar_eleL">
-                    <img src="images/Group_icon.svg" alt="img!">                
-                    <p>ALL GROUPS</p>
+                <div class="top_child_navbar_eleR">
+                    <a href="#"><img  src="images/bell.png" alt="img!"></a>
+                    <div class="navbarR_1">
+                        <a href="#"><p class="username_logo">John Smith</p></a>
+                        <a href="#"><p class="username_sim">T-Mobile USA</p></a>
+                    </div>
+                    <a href="#"><img src="images/person.jpg" alt="img!"></a>
                 </div>
-            </div>
-            <div class="child_side_navbar_bottom">
-                <div class="side_child_navbar_eleL">
-                    <img src="images/ICON_PACK.svg" alt="img!">                
-                    <p>ALL PACKS</p>
-                </div>
-            </div>
+            </header>
+            <div class="wrapper">
+                <aside id="side-navbar" class="parent_side_navbar">                
+                    <div class="child_side_navbar_top">
+                        <strong>YOUR GROUPS/ PACKS</strong>
+                        <p class="navbarmargin" style="color: rgb(184, 184, 184);">You don't have access to anything yet</p>
+                        <hr>
+                        
+                        <strong class="navbarmargin" style="display: block;">YOUR REQUESTS</strong>
+                        
+                        <table class="group_requests">
+                            <tr>
+                            <th><span class="requestcount_head">Pending</span></th>
+                            <td><span class="requestcount">6</span></td>
+                            </tr>
+                            <tr>
+                            <th><span class="requestcount_head">Approved</span></th>
+                            <td><span class="requestcount">6</span></td>
+                            </tr>
+                            <tr>
+                            <th><span class="requestcount_head">Rejected</span></th>
+                            <td><span class="requestcount">6</span></td>
+                            </tr>
+                        </table>                  
+                        <hr>
+                        <strong class="navbarmargin" style="display: block;">YOUR APPROVALS</strong>
+                        
+                        <p class="navbarmargin" style="display: block; color: rgb(184, 184, 184);">You don't have any approvals yet</p>
+                        <hr>
+                    </div>
+                    <div class="child_side_navbar_bottom">
+                        <div class="side_child_navbar_eleL">
+                            <img src="images/Group_icon.svg" alt="img!">                
+                            <p>ALL GROUPS</p>
+                        </div>
+                    </div>
+                    <div class="child_side_navbar_bottom">
+                        <div class="side_child_navbar_eleL">
+                            <img src="images/ICON_PACK.svg" alt="img!">                
+                            <p>ALL PACKS</p>
+                        </div>
+                    </div>
 
-        </div>
-        <div class="wrapper">
-            <div class="wrapper-content-main">
-                <strong>ALL GROUPS:</strong><hr style="margin: 20px 0;">                
-                <strong style="color: grey; font-weight:500;">Recommended Groups:</strong><span style="float: right;"><img onClick="scrollbtn(this.id)" id = "scroll_left" src="images/Arrow_back.svg" alt="img!"> <img onClick="scrollbtn(this.id)" id = "scroll_right"src="images/Arrow_forward.svg" alt="img!"></span>
-                <div id = "groupscroller" class="parent-wrapper-group-box">
-                    <div class="child-wrapper-group-box">
-                        <a href="#"><img src="images/Group_icon.svg" alt="img!"></a>
-                        <div class="navbarR_1-wrapper">
-                            <a href="#"><span class="overflow_text">ABC Security Group</span></a>
-                            <a href="#"><span class="overflow_text  recommended_group_textname" >John Smith</span></a>
+                </aside>
+                <section>
+                    <div class="wrapper-content-main">
+                        <strong>ALL GROUPS:</strong><hr style="margin: 20px 0;">                
+                        <strong style="color: grey; font-weight:500;">Recommended Groups:</strong><span style="float: right;"><img onClick="scrollbtn(this.id)" id = "scroll_left" src="images/Arrow_back.svg" alt="img!"> <img onClick="scrollbtn(this.id)" id = "scroll_right"src="images/Arrow_forward.svg" alt="img!"></span>
+                        <div id = "groupscroller" class="parent-wrapper-group-box">
+                            <div class="child-wrapper-group-box">
+                                <a href="#"><img src="images/Group_icon.svg" alt="img!"></a>
+                                <div class="navbarR_1-wrapper">
+                                    <a href="#"><span class="overflow_text">ABC Security Group</span></a>
+                                    <a href="#"><span class="overflow_text  recommended_group_textname" >John Smith</span></a>
+                                </div>
+                                <a href="#"><img src="images/plus.svg" alt="img!"></a>
+                            </div>
+                            <div class="child-wrapper-group-box">
+                                <a href="#"><img src="images/Group_icon.svg" alt="img!"></a>
+                                <div class="navbarR_1-wrapper">
+                                    <a href="#"><span  class="overflow_text">1HR Care Talent scout scout scoutscoutscout</span></a>
+                                    <a href="#"><span  class="overflow_text recommended_group_textname" >John Smith, Lisandro</span></a>
+                                </div>
+                                <a href="#"><img src="images/plus.svg" alt="img!"></a>
+                            </div>
+                            <div class="child-wrapper-group-box">
+                                <a href="#"><img src="images/Group_icon.svg" alt="img!"></a>
+                                <div class="navbarR_1-wrapper">
+                                    <a href="#"><span  class="overflow_text">1HR Care Talent scout scout scoutscoutscout</span></a>
+                                    <a href="#"><span  class="overflow_text recommended_group_textname" >John Smith, Lisandro</span></a>
+                                </div>
+                                <a href="#"><img src="images/plus.svg" alt="img!"></a>
+                            </div>
+                            <div class="child-wrapper-group-box">
+                                <a href="#"><img src="images/Group_icon.svg" alt="img!"></a>
+                                <div class="navbarR_1-wrapper">
+                                    <a href="#"><span  class="overflow_text">1HR Care Talent scout scout scoutscoutscout</span></a>
+                                    <a href="#"><span  class="overflow_text recommended_group_textname" >John Smith, Lisandro</span></a>
+                                </div>
+                                <a href="#"><img src="images/plus.svg" alt="img!"></a>
+                            </div>
+                            <div class="child-wrapper-group-box">
+                                <a href="#"><img src="images/Group_icon.svg" alt="img!"></a>
+                                <div class="navbarR_1-wrapper">
+                                    <a href="#"><span  class="overflow_text">1HR Care Talent scout scout scoutscoutscout</span></a>
+                                    <a href="#"><span  class="overflow_text recommended_group_textname" >John Smith, Lisandro</span></a>
+                                </div>
+                                <a href="#"><img src="images/plus.svg" alt="img!"></a>
+                            </div>
+                            <div class="child-wrapper-group-box">
+                                <a href="#"><img src="images/Group_icon.svg" alt="img!"></a>
+                                <div class="navbarR_1-wrapper">
+                                    <a href="#"><span  class="overflow_text">1HR Care Talent scout scout scoutscoutscout</span></a>
+                                    <a href="#"><span  class="overflow_text recommended_group_textname" >John Smith, Lisandro</span></a>
+                                </div>
+                                <a href="#"><img src="images/plus.svg" alt="img!"></a>
+                            </div>
+                            <div class="child-wrapper-group-box">
+                                <a href="#"><img src="images/Group_icon.svg" alt="img!"></a>
+                                <div class="navbarR_1-wrapper">
+                                    <a href="#"><span  class="overflow_text">1HR Care Talent scout scout scoutscoutscout</span></a>
+                                    <a href="#"><span  class="overflow_text recommended_group_textname" >John Smith, Lisandro</span></a>
+                                </div>
+                                <a href="#"><img src="images/plus.svg" alt="img!"></a>
+                            </div>
+                            <div class="child-wrapper-group-box">
+                                <a href="#"><img src="images/Group_icon.svg" alt="img!"></a>
+                                <div class="navbarR_1-wrapper">
+                                    <a href="#"><span  class="overflow_text">1HR Care Talent scout scout scoutscoutscout</span></a>
+                                    <a href="#"><span  class="overflow_text recommended_group_textname" >John Smith, Lisandro</span></a>
+                                </div>
+                                <a href="#"><img src="images/plus.svg" alt="img!"></a>
+                            </div>
                         </div>
-                        <a href="#"><img src="images/plus.svg" alt="img!"></a>
-                    </div>
-                    <div class="child-wrapper-group-box">
-                        <a href="#"><img src="images/Group_icon.svg" alt="img!"></a>
-                        <div class="navbarR_1-wrapper">
-                            <a href="#"><span  class="overflow_text">1HR Care Talent scout scout scoutscoutscout</span></a>
-                            <a href="#"><span  class="overflow_text recommended_group_textname" >John Smith, Lisandro</span></a>
-                        </div>
-                        <a href="#"><img src="images/plus.svg" alt="img!"></a>
-                    </div>
-                    <div class="child-wrapper-group-box">
-                        <a href="#"><img src="images/Group_icon.svg" alt="img!"></a>
-                        <div class="navbarR_1-wrapper">
-                            <a href="#"><span  class="overflow_text">1HR Care Talent scout scout scoutscoutscout</span></a>
-                            <a href="#"><span  class="overflow_text recommended_group_textname" >John Smith, Lisandro</span></a>
-                        </div>
-                        <a href="#"><img src="images/plus.svg" alt="img!"></a>
-                    </div>
-                    <div class="child-wrapper-group-box">
-                        <a href="#"><img src="images/Group_icon.svg" alt="img!"></a>
-                        <div class="navbarR_1-wrapper">
-                            <a href="#"><span  class="overflow_text">1HR Care Talent scout scout scoutscoutscout</span></a>
-                            <a href="#"><span  class="overflow_text recommended_group_textname" >John Smith, Lisandro</span></a>
-                        </div>
-                        <a href="#"><img src="images/plus.svg" alt="img!"></a>
-                    </div>
-                    <div class="child-wrapper-group-box">
-                        <a href="#"><img src="images/Group_icon.svg" alt="img!"></a>
-                        <div class="navbarR_1-wrapper">
-                            <a href="#"><span  class="overflow_text">1HR Care Talent scout scout scoutscoutscout</span></a>
-                            <a href="#"><span  class="overflow_text recommended_group_textname" >John Smith, Lisandro</span></a>
-                        </div>
-                        <a href="#"><img src="images/plus.svg" alt="img!"></a>
-                    </div>
-                    <div class="child-wrapper-group-box">
-                        <a href="#"><img src="images/Group_icon.svg" alt="img!"></a>
-                        <div class="navbarR_1-wrapper">
-                            <a href="#"><span  class="overflow_text">1HR Care Talent scout scout scoutscoutscout</span></a>
-                            <a href="#"><span  class="overflow_text recommended_group_textname" >John Smith, Lisandro</span></a>
-                        </div>
-                        <a href="#"><img src="images/plus.svg" alt="img!"></a>
-                    </div>
-                    <div class="child-wrapper-group-box">
-                        <a href="#"><img src="images/Group_icon.svg" alt="img!"></a>
-                        <div class="navbarR_1-wrapper">
-                            <a href="#"><span  class="overflow_text">1HR Care Talent scout scout scoutscoutscout</span></a>
-                            <a href="#"><span  class="overflow_text recommended_group_textname" >John Smith, Lisandro</span></a>
-                        </div>
-                        <a href="#"><img src="images/plus.svg" alt="img!"></a>
-                    </div>
-                    <div class="child-wrapper-group-box">
-                        <a href="#"><img src="images/Group_icon.svg" alt="img!"></a>
-                        <div class="navbarR_1-wrapper">
-                            <a href="#"><span  class="overflow_text">1HR Care Talent scout scout scoutscoutscout</span></a>
-                            <a href="#"><span  class="overflow_text recommended_group_textname" >John Smith, Lisandro</span></a>
-                        </div>
-                        <a href="#"><img src="images/plus.svg" alt="img!"></a>
-                    </div>
-                </div>
-                <div class="wrapper-content-table">
-                    <div class="wrapper-content">                           
-                        <div class="top_child_navbar_eleL_group">            
-                            <strong>ALL GROUPS</strong>
-                        </div>                    
-                        <div class="top_child_navbar_eleR btnx">
-                            <i class='bx bx-search'></i>
-                            <input id="inputtext" onkeyup="filtertable()" type="text" placeholder=" Find A Group" style="font-family:Arial, FontAwesome" />
-                            <button> + New Group</button>
-                        </div> 
-                    </div>
-                    <div class="wrapper-table">
-                        <table id ="group_table" class="group_data">
-                            <thead>
-                                <tr>
-                                <th style="width: 10px;"><input class="checkbox_default" type="checkbox"></th>
-                                <th class="mediagroup0" style="color:black; text-decoration: none;">GROUP NAME
-                                    <img onclick="sorttable()" src="images/Sorting.svg" alt="img!" style="float: right; top:0px; width: 20px; height: 10px;"></th>
-                                <th class="mediagroup1" style=" text-decoration: none;">GROUP OWNER</th>
-                                <th class="mediagroup2">CREATED ON</th>
-                                <th style="text-align: center;">ACTIONS</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr id="group_tr">
-                                <td style="width: 10px;"><input class="checkbox_default" type="checkbox"></td>
-                                <td class="mediagroup0 groupsrch"><img src="images/Group_icon.svg" alt="img!"><span class="overflow_text">maria a</span></td>
-                                <td class="mediagroup1" ><img src="images/User_Multiple.svg" alt="img!"><span class="overflow_text">Maria Anders Anders Anders Anders Anders Anders Anders...</span></td>
-                                <td class="mediagroup2" >08/13/2021</td>
-                                <td style="text-align: center;">
-                                    <button type="submit"> + Join</button></td>
-                                </tr>
-                                <tr id="group_tr">
-                                <td style="width: 10px;"><input class="checkbox_default" type="checkbox"></td>
-                                <td class="mediagroup0 groupsrch" ><img src="images/Group_icon.svg" alt="img!"><span class="overflow_text">anders b</span></td>
-                                <td class="mediagroup1" ><img src="images/User_Multiple.svg" alt="img!"><span class="overflow_text">Maria Anders Anders Anders Anders Anders Anders Anders...</span></td>
-                                <td class="mediagroup2" >08/13/2021</td>
-                                <td style="text-align: center;">
-                                    <button type="submit"> + Join</button></td>
-                                </tr>
-                                <tr id="group_tr">
-                                <td style="width: 10px;"><input class="checkbox_default" type="checkbox"></td>
-                                <td class="mediagroup0 groupsrch" ><img src="images/Group_icon.svg" alt="img!"><span class="overflow_text">tanisq c</span></td>
-                                <td class="mediagroup1 groupsrch" ><img src="images/User_Multiple.svg" alt="img!"><span class="overflow_text">Maria Anders Anders Anders Anders Anders Anders Anders...</span></td>
-                                <td class="mediagroup2" >08/13/2021</td>
-                                <td style="text-align: center;">
-                                    <button type="submit"> + Join</button></td>
-                                </tr>
-                                <tr id="group_tr">
-                                <td style="width: 10px;"><input class="checkbox_default" type="checkbox"></td>
-                                <td class="mediagroup0 groupsrch" ><img src="images/Group_icon.svg" alt="img!"><span class="overflow_text">obaid d</span></td>
-                                <td class="mediagroup1" ><img src="images/User_Multiple.svg" alt="img!"><span class="overflow_text">Maria Anders Anders Anders Anders Anders Anders Anders...</span></td>
-                                <td class="mediagroup2" >08/13/2021</td>
-                                <td style="text-align: center;">
-                                    <button type="submit"> + Join</button></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>                    
-                </div>
-                
-                <div class="pageno">
-                    <span>Showing 10-20 | GoTo <input> | <img style="margin-left:4px;" src="images/Arrow_back.svg" alt="img!"> <strong style="margin:0px 4px;">1</strong> 2 3 4 5</span>
-                </div>
-            </div>      
+                        <div class="wrapper-content-table">
+                            <div class="wrapper-content">                           
+                                <div class="top_child_navbar_eleL_group">            
+                                    <strong>ALL GROUPS</strong>
+                                </div>                    
+                                <div class="top_child_navbar_eleR btnx">
+                                    <i class='bx bx-search'></i>
+                                    <input id="inputtext" onkeyup="processChange()" type="text" placeholder=" Find A Group" style="font-family:Arial, FontAwesome" />
+                                    <button> + New Group</button>
+                                </div> 
+                            </div>
+                            <div class="wrapper-table">
+                                <table id ="group_table" class="group_data">
+                                    <thead>
+                                        <tr>
+                                        <th style="width: 10px;"><input class="checkbox_default" type="checkbox"></th>
+                                        <th class="mediagroup0" style="color:black; text-decoration: none;">GROUP NAME
+                                            <img id="sorting" class="sort" src="images/Sorting.svg" alt="img!" style="float: right; top:0px; width: 20px; height: 10px;"></th>
+                                        <th class="mediagroup1" style=" text-decoration: none;">GROUP OWNER</th>
+                                        <th class="mediagroup2">CREATED ON</th>
+                                        <th style="text-align: center;">ACTIONS</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                        <td style="width: 10px;"><input class="checkbox_default" type="checkbox"></td>
+                                        <td class="mediagroup0 groupsrch"><img src="images/Group_icon.svg" alt="img!"><span class="overflow_text">maria a</span></td>
+                                        <td class="mediagroup1" ><img src="images/User_Multiple.svg" alt="img!"><span class="overflow_text">Maria Anders Anders Anders Anders Anders Anders Anders...</span></td>
+                                        <td class="mediagroup2" >08/13/2021</td>
+                                        <td style="text-align: center;">
+                                            <button type="submit"> + Join</button></td>
+                                        </tr>
+                                        <tr>
+                                        <td style="width: 10px;"><input class="checkbox_default" type="checkbox"></td>
+                                        <td class="mediagroup0 groupsrch" ><img src="images/Group_icon.svg" alt="img!"><span class="overflow_text">anders b</span></td>
+                                        <td class="mediagroup1" ><img src="images/User_Multiple.svg" alt="img!"><span class="overflow_text">Maria Anders Anders Anders Anders Anders Anders Anders...</span></td>
+                                        <td class="mediagroup2" >08/13/2021</td>
+                                        <td style="text-align: center;">
+                                            <button type="submit"> + Join</button></td>
+                                        </tr>
+                                        <tr>
+                                        <td style="width: 10px;"><input class="checkbox_default" type="checkbox"></td>
+                                        <td class="mediagroup0 groupsrch" ><img src="images/Group_icon.svg" alt="img!"><span class="overflow_text">tanisq c</span></td>
+                                        <td class="mediagroup1 groupsrch" ><img src="images/User_Multiple.svg" alt="img!"><span class="overflow_text">Maria Anders Anders Anders Anders Anders Anders Anders...</span></td>
+                                        <td class="mediagroup2" >08/13/2021</td>
+                                        <td style="text-align: center;">
+                                            <button type="submit"> + Join</button></td>
+                                        </tr>
+                                        <tr>
+                                        <td style="width: 10px;"><input class="checkbox_default" type="checkbox"></td>
+                                        <td class="mediagroup0 groupsrch" ><img src="images/Group_icon.svg" alt="img!"><span class="overflow_text">obaid d</span></td>
+                                        <td class="mediagroup1" ><img src="images/User_Multiple.svg" alt="img!"><span class="overflow_text">Maria Anders Anders Anders Anders Anders Anders Anders...</span></td>
+                                        <td class="mediagroup2" >08/13/2021</td>
+                                        <td style="text-align: center;">
+                                            <button type="submit"> + Join</button></td>
+                                        </tr>
+                                        <tr>
+                                        <td style="width: 10px;"><input class="checkbox_default" type="checkbox"></td>
+                                        <td class="mediagroup0 groupsrch" ><img src="images/Group_icon.svg" alt="img!"><span class="overflow_text">obaid d</span></td>
+                                        <td class="mediagroup1" ><img src="images/User_Multiple.svg" alt="img!"><span class="overflow_text">Maria Anders Anders Anders Anders Anders Anders Anders...</span></td>
+                                        <td class="mediagroup2" >08/13/2021</td>
+                                        <td style="text-align: center;">
+                                            <button type="submit"> + Join</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <script type="text/javascript">
+                                      
+                                    $(document).ready(function() {
+                                        $(".group_data").fancyTable({
+                                          /* Column number for initial sorting*/
+                                           sortColumn:0,
+                                           /* Setting pagination or enabling */
+                                           pagination: true,
+                                           /* Rows per page kept for display */
+                                           perPage:1,
+                                           globalSearch:true
+                                           });
+                                                      
+                                    });
+                                </script>
+                            </div>                   
+                        </div>                        
+                        <div class="pageno" style="margin:1rem 1rem 0 0;">
+                            <span>Showing 10-20 | GoTo <input> | <img style="margin-left:4px; " src="images/Arrow_back.svg" alt="img!"> <strong style="margin:0px 4px;">1</strong> 2 3 4 5</span>
+                        </div>     
+                    </div>  
+                </section>
+            </div>
         </div>
     </body>
+    <script src="js/fancyTable.js"></script>
     <script src="js/script.js"></script>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </html>
