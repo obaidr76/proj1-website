@@ -4,7 +4,6 @@
     <title>Cloud Access</title>
         <link rel="shortcut icon" href="images/cloud.png" type="image/x-icon">
         <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet"/>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
@@ -38,6 +37,7 @@
                         <strong class="navbarmargin" style="display: block;">YOUR REQUESTS</strong>
                         
                         <table class="group_requests">
+                            <tbody style="width: 100%;">
                             <tr>
                             <th><span class="requestcount_head">Pending</span></th>
                             <td><span class="requestcount">6</span></td>
@@ -50,6 +50,7 @@
                             <th><span class="requestcount_head">Rejected</span></th>
                             <td><span class="requestcount">6</span></td>
                             </tr>
+                        </tbody>
                         </table>                  
                         <hr>
                         <strong class="navbarmargin" style="display: block;">YOUR APPROVALS</strong>
@@ -156,7 +157,7 @@
                                 <table id ="group_table" class="group_data">
                                     <thead>
                                         <tr>
-                                        <th style="width: 10px;"><input class="checkbox_default" type="checkbox"></th>
+                                        <th style="width: 10px;"><input  onClick="selectall(this)"  class="checkbox_default" type="checkbox"></th>
                                         <th class="mediagroup0" style="color:black; text-decoration: none;">GROUP NAME
                                             <img id="sorting" class="sort" src="images/Sorting.svg" alt="img!" style="float: right; top:0px; width: 20px; height: 10px;"></th>
                                         <th class="mediagroup1" style=" text-decoration: none;">GROUP OWNER</th>
@@ -166,23 +167,23 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                        <td style="width: 10px;"><input class="checkbox_default" type="checkbox"></td>
-                                        <td class="mediagroup0 groupsrch"><img src="images/Group_icon.svg" alt="img!"><span class="overflow_text">maria a</span></td>
+                                        <td style="width: 10px;"><input class="checkbox_default" name="cbox" type="checkbox"></td>
+                                        <td class="mediagroup0 groupsrch"><img src="images/Group_icon.svg" alt="img!"><span class="overflow_text">anders a</span></td>
                                         <td class="mediagroup1" ><img src="images/User_Multiple.svg" alt="img!"><span class="overflow_text">Maria Anders Anders Anders Anders Anders Anders Anders...</span></td>
                                         <td class="mediagroup2" >08/13/2021</td>
                                         <td style="text-align: center;">
                                             <button type="submit"> + Join</button></td>
                                         </tr>
                                         <tr>
-                                        <td style="width: 10px;"><input class="checkbox_default" type="checkbox"></td>
-                                        <td class="mediagroup0 groupsrch" ><img src="images/Group_icon.svg" alt="img!"><span class="overflow_text">anders b</span></td>
+                                        <td style="width: 10px;"><input class="checkbox_default" name="cbox" type="checkbox"></td>
+                                        <td class="mediagroup0 groupsrch" ><img src="images/Group_icon.svg" alt="img!"><span class="overflow_text">maria b</span></td>
                                         <td class="mediagroup1" ><img src="images/User_Multiple.svg" alt="img!"><span class="overflow_text">Maria Anders Anders Anders Anders Anders Anders Anders...</span></td>
                                         <td class="mediagroup2" >08/13/2021</td>
                                         <td style="text-align: center;">
                                             <button type="submit"> + Join</button></td>
                                         </tr>
                                         <tr>
-                                        <td style="width: 10px;"><input class="checkbox_default" type="checkbox"></td>
+                                        <td style="width: 10px;"><input class="checkbox_default" name="cbox" type="checkbox"></td>
                                         <td class="mediagroup0 groupsrch" ><img src="images/Group_icon.svg" alt="img!"><span class="overflow_text">tanisq c</span></td>
                                         <td class="mediagroup1 groupsrch" ><img src="images/User_Multiple.svg" alt="img!"><span class="overflow_text">Maria Anders Anders Anders Anders Anders Anders Anders...</span></td>
                                         <td class="mediagroup2" >08/13/2021</td>
@@ -190,7 +191,7 @@
                                             <button type="submit"> + Join</button></td>
                                         </tr>
                                         <tr>
-                                        <td style="width: 10px;"><input class="checkbox_default" type="checkbox"></td>
+                                        <td style="width: 10px;"><input class="checkbox_default" name="cbox" type="checkbox"></td>
                                         <td class="mediagroup0 groupsrch" ><img src="images/Group_icon.svg" alt="img!"><span class="overflow_text">obaid d</span></td>
                                         <td class="mediagroup1" ><img src="images/User_Multiple.svg" alt="img!"><span class="overflow_text">Maria Anders Anders Anders Anders Anders Anders Anders...</span></td>
                                         <td class="mediagroup2" >08/13/2021</td>
@@ -198,8 +199,24 @@
                                             <button type="submit"> + Join</button></td>
                                         </tr>
                                         <tr>
-                                        <td style="width: 10px;"><input class="checkbox_default" type="checkbox"></td>
-                                        <td class="mediagroup0 groupsrch" ><img src="images/Group_icon.svg" alt="img!"><span class="overflow_text">obaid d</span></td>
+                                        <td style="width: 10px;"><input class="checkbox_default" name="cbox" type="checkbox"></td>
+                                        <td class="mediagroup0 groupsrch" ><img src="images/Group_icon.svg" alt="img!"><span class="overflow_text">rehman d</span></td>
+                                        <td class="mediagroup1" ><img src="images/User_Multiple.svg" alt="img!"><span class="overflow_text">Maria Anders Anders Anders Anders Anders Anders Anders...</span></td>
+                                        <td class="mediagroup2" >08/13/2021</td>
+                                        <td style="text-align: center;">
+                                            <button type="submit"> + Join</button></td>
+                                        </tr>
+                                        <tr>
+                                        <td style="width: 10px;"><input class="checkbox_default" name="cbox" type="checkbox"></td>
+                                        <td class="mediagroup0 groupsrch" ><img src="images/Group_icon.svg" alt="img!"><span class="overflow_text">shruti d</span></td>
+                                        <td class="mediagroup1" ><img src="images/User_Multiple.svg" alt="img!"><span class="overflow_text">Maria Anders Anders Anders Anders Anders Anders Anders...</span></td>
+                                        <td class="mediagroup2" >08/13/2021</td>
+                                        <td style="text-align: center;">
+                                            <button type="submit"> + Join</button></td>
+                                        </tr>
+                                        <tr>
+                                        <td style="width: 10px;"><input class="checkbox_default" name="cbox" type="checkbox"></td>
+                                        <td class="mediagroup0 groupsrch" ><img src="images/Group_icon.svg" alt="img!"><span class="overflow_text">saurav d</span></td>
                                         <td class="mediagroup1" ><img src="images/User_Multiple.svg" alt="img!"><span class="overflow_text">Maria Anders Anders Anders Anders Anders Anders Anders...</span></td>
                                         <td class="mediagroup2" >08/13/2021</td>
                                         <td style="text-align: center;">
@@ -207,32 +224,26 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                                <script type="text/javascript">
-                                      
-                                    $(document).ready(function() {
-                                        $(".group_data").fancyTable({
-                                          /* Column number for initial sorting*/
-                                           sortColumn:0,
-                                           /* Setting pagination or enabling */
-                                           pagination: true,
-                                           /* Rows per page kept for display */
-                                           perPage:1,
-                                           globalSearch:true
-                                           });
-                                                      
-                                    });
-                                </script>
                             </div>                   
-                        </div>                        
-                        <div class="pageno" style="margin:1rem 1rem 0 0;">
-                            <span>Showing 10-20 | GoTo <input> | <img style="margin-left:4px; " src="images/Arrow_back.svg" alt="img!"> <strong style="margin:0px 4px;">1</strong> 2 3 4 5</span>
-                        </div>     
+                        </div>
+                        <div class="bottomOptions">
+                            <span class="showing"> Showing <span id="goto_lower"></span> - <span  id="goto_upper"></span> </span>
+                            <label for="goto" class="goto">Goto</label>
+                            <input type="text" class="gotoInput" onkeyup="GoToPage(this.value)"  />
+                            <div class="pageNumbers">
+                                <!-- <button class="btn pageNumbersBtn"><span><</span></button> -->
+                                <!-- <span class="allPageNo">1 2 3 4...10</span> -->
+                                <ul id="tableList">
+                                <li><a href="#" class="next btn pageNumbersBtn" id="nextId">></a></li>
+                                <li><a href="#" class="prev btn pageNumbersBtn" id="prevId"><</a></li>
+                                </ul>
+                            </div>
+                        </div>   
                     </div>  
                 </section>
             </div>
         </div>
     </body>
-    <script src="js/fancyTable.js"></script>
     <script src="js/script.js"></script>
     <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
