@@ -199,7 +199,8 @@ hr {
 }
 
 .wrapper-content-main {
-  padding: 2rem;
+  margin: 2rem;
+  height: calc(100%-4rem);
 }
 
 .parent-wrapper-group-box {
@@ -254,7 +255,6 @@ hr {
   width: 100%;
   height: 50%;
   border-radius: 5px;
-  display: block;
   overflow: none;
 }
 
@@ -406,6 +406,7 @@ a {
 
 .group_data tbody {
   display: block;
+  height: calc(100vh - 33rem);
   overflow-y: auto;
 }
 
@@ -414,10 +415,6 @@ a {
   display: table;
   text-align: left;
   width: 100%;
-}
-.group_data tbody {
-  display: block;
-  overflow-y: auto;
 }
 .mediagroup0 img,
 .mediagroup1 img {
@@ -478,15 +475,11 @@ a {
   .side_child_navbar_eleL {
       margin-left: 1.5rem;
   }
-  .group_data tbody {
-    display: block;
-    overflow-y: auto;
-  }
 }
 
 @media only screen and (max-width: 1050px) {
   .wrapper-content-main {
-      padding: 2rem 1.5rem;
+      margin: 2rem 1.5rem;
   }
   .side_child_navbar_eleL {
       margin-left: 1rem;
@@ -515,10 +508,6 @@ a {
   }
   .mediagroup0 {
       width: 55%;
-  }
-  .group_data tbody {
-    display: block;
-    overflow-y: auto;
   }
 }
 
@@ -612,6 +601,7 @@ a {
 @media only screen and (max-width:500px) {
   .group_data tbody {
       display: block; 
+      height: calc(100vh - 30rem);
   }
   .top_child_navbar_eleR {
       margin-right: 0.5rem;
@@ -620,7 +610,7 @@ a {
       margin-left: 0.5rem;
   }
   .wrapper-content-main {
-      padding: 1rem 0.5rem;
+      margin: 1rem 0.5rem;
   }
   .group_data {
       margin: 0rem 0.5rem;
@@ -740,7 +730,7 @@ input {
 
 @media only screen and (max-width: 4000px) and (min-width: 3001px) {
   html {
-      font-size: 28px;
+      font-size: 32px;
   }
 }
 
@@ -832,7 +822,7 @@ ul li.pageNumber.active a {
 
 @media only screen and (max-height:640px) {
   .parent_side_navbar {
-      display: none; overflow: auto;
+      display: none; 
   }
   #toggleNavbar {
       display: block;
@@ -841,4 +831,13 @@ ul li.pageNumber.active a {
   section {
     overflow-y: scroll; overflow-x:hidden;
   }
+  .group_data tbody {
+      display: block; 
+      height: calc(100vh - 25rem);
+  }
+.child_side_navbar_top{
+  height: 10rem; overflow: auto;
+}
+
+
 }
